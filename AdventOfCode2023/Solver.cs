@@ -1,11 +1,4 @@
-﻿using AdventOfCode2023.Solvers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdventOfCode2023
+﻿namespace AdventOfCode2023
 {
     internal static class Solver
     {
