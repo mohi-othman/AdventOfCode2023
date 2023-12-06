@@ -4,23 +4,24 @@ namespace AdventOfCode2023
 {
     internal static class Solver
     {
-        static Dictionary<int, IDay> solvers = new()
+        static Dictionary<int, (IDay solver, bool reUseFile)> solvers = new()
         {
-            { 1, new Day01() },
-            { 2, new Day02() },
+            { 1, (new Day01(), true) },
+            { 2, (new Day02(), true) },
+            { 3, (new Day03(), true) },
         };
 
         public static string Solve(int day, int part)
         {
-            var solver = solvers[day];
-            var data = Helpers.ReadFile(day, part);
+            var daySolver = solvers[day];
+            var data = Helpers.ReadFile(day, daySolver.reUseFile ? 1: part);
             if(part == 1)
             {
-                return solver.SolveFirst(data);
+                return daySolver.solver.SolveFirst(data);
             }
             else
             {
-                return solver.SolveSecond(data);
+                return daySolver.solver.SolveSecond(data);
             }
         }
 
