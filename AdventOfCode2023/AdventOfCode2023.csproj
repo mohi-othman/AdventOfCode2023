@@ -11,11 +11,13 @@
     <None Remove="Data\Day0101.txt" />
     <None Remove="Data\Day0201.txt" />
     <None Remove="Data\Day0301.txt" />
+    <None Remove="Data\Day0401.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Day0101.txt" />
     <EmbeddedResource Include="Data\Day0201.txt" />
+    <EmbeddedResource Include="Data\Day0401.txt" />
     <EmbeddedResource Include="Data\Day0301.txt" />
   </ItemGroup>
 
